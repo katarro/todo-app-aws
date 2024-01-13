@@ -1,0 +1,40 @@
+@use './typography' as *;
+@use '../abstracts/' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  @extend *;
+}
+
+*::after {
+  @extend *;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.attribution {
+  margin-top: 1.5rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--color);
+  transition: color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
